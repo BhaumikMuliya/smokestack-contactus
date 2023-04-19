@@ -1,0 +1,4 @@
+@font-face {
+  font-family: "YummyFoodies";
+  src: local('YummyFoodies'), url('./../fonts/YummyFoodies.ttf') format('ttf');
+}

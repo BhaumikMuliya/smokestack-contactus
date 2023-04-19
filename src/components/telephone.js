@@ -41,6 +41,22 @@ function Telephone() {
           isCalling ? "vibrate_receiver" : ""
         }`}
       />
+      <div
+        className={`absolute text-center -translate-x-1/2 bottom-106 left-1/2 font-yfs ${
+          isCalling ? "" : "hidden"
+        }`}
+      >
+        <p className={`pl-10 text-60 rotate-6 ${isCalling ? "xl_text" : ""}`}>
+          Tring..
+        </p>
+        <p className={`pr-5 text-50 -rotate-3 ${isCalling ? "lg_text" : ""}`}>
+          Tring..
+        </p>
+        <p className={`pl-10 text-40 ${isCalling ? "md_text" : ""}`}>Tring..</p>
+        <p className={`pr-5 text-30 -rotate-3 ${isCalling ? "sm_text" : ""}`}>
+          Tring..
+        </p>
+      </div>
     </section>
   );
 }
