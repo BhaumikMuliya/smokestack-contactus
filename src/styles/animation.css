@@ -131,3 +131,21 @@
     opacity: 0;
   }
 }
+
+.disclaimer {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fadeInAnimation;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

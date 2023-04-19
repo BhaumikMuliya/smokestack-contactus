@@ -41,19 +41,36 @@ function Telephone() {
           isCalling ? "vibrate_receiver" : ""
         }`}
       />
-      <div
-        className={`absolute text-center -translate-x-1/2 bottom-106 left-1/2 font-yfs ${
-          isCalling ? "" : "hidden"
+      <img
+        src="https://24108406.fs1.hubspotusercontent-na1.net/hubfs/24108406/%5Bi-SmokeStack%5D/Website/Files%20for%20Developer/Contact%20us%20Page/Web/Elements/Disclaimer%20by%20%5Bi-smokestack%5D.png"
+        alt=""
+        className={`absolute w-12 ml-56 left-1/2 top-106 ${
+          isCalling ? "disclaimer" : "hidden"
         }`}
-      >
-        <p className={`pl-10 text-60 rotate-6 ${isCalling ? "xl_text" : ""}`}>
+      />
+      <div className="absolute text-center -translate-x-1/2 bottom-106 left-1/2 font-yfs">
+        <p
+          className={`pl-10 text-60 rotate-6 ${
+            isCalling ? "xl_text" : "hidden"
+          }`}
+        >
           Tring..
         </p>
-        <p className={`pr-5 text-50 -rotate-3 ${isCalling ? "lg_text" : ""}`}>
+        <p
+          className={`pr-5 text-50 -rotate-3 ${
+            isCalling ? "lg_text" : "hidden"
+          }`}
+        >
           Tring..
         </p>
-        <p className={`pl-10 text-40 ${isCalling ? "md_text" : ""}`}>Tring..</p>
-        <p className={`pr-5 text-30 -rotate-3 ${isCalling ? "sm_text" : ""}`}>
+        <p className={`pl-10 text-40 ${isCalling ? "md_text" : "hidden"}`}>
+          Tring..
+        </p>
+        <p
+          className={`pr-5 text-30 -rotate-3 ${
+            isCalling ? "sm_text" : "hidden"
+          }`}
+        >
           Tring..
         </p>
       </div>
