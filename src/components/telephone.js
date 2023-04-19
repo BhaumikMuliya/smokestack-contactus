@@ -1,6 +1,27 @@
+import React from "react";
 import "./../styles/animation.css";
 
 function Telephone() {
+  const [isCalling, setIsCalling] = React.useState(false);
+
+  const keyDownHandler = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      setIsCalling(true);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      setIsCalling(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener("keydown", keyDownHandler);
+
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  }, []);
+
   return (
     <section className="relative w-screen h-screen">
       <img
@@ -16,7 +37,9 @@ function Telephone() {
       <img
         src="https://24108406.fs1.hubspotusercontent-na1.net/hubfs/24108406/Files%20for%20Developer/Contact%20us%20Page/Web/Ringing%20Slide/2.%20Reciever%20by%20%5Bi-smokestack%5D.png"
         alt=""
-        className="absolute -ml-58 w-108 bottom-36 left-1/2 vibrate_receiver"
+        className={`absolute -ml-58 w-108 bottom-36 left-1/2 ${
+          isCalling ? "vibrate_receiver" : ""
+        }`}
       />
     </section>
   );
