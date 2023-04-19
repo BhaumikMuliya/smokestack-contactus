@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cursive: "cursive",
+      },
+      boxShadow: {
+        button: "4px 4px black",
+      },
+    },
   },
   plugins: [],
 };
