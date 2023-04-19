@@ -1,15 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./styles/index.css";
 import App from "./pages/App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/NotFound";
+import Telephone from "./components/telephone";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/telephone",
+    element: <Telephone />,
   },
 ]);
 

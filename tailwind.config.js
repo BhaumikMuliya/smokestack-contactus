@@ -9,6 +9,12 @@ module.exports = {
       boxShadow: {
         button: "4px 4px black",
       },
+      width: {
+        108: "432px",
+      },
+      margin: {
+        58: "232px",
+      },
     },
   },
   plugins: [],
