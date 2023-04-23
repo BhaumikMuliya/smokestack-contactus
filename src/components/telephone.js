@@ -34,13 +34,17 @@ function Telephone() {
             : "https://24108406.fs1.hubspotusercontent-na1.net/hubfs/24108406/%5Bi-SmokeStack%5D/Website/Files%20for%20Developer/Contact%20us%20Page/Web/Elements/Contact%20Us%20by%20%5Bi-smokestack%5D.png"
         }
         alt="background"
-        className="fixed z-0 object-cover h-full m-auto -translate-x-1/2 left-1/2"
+        className={`fixed z-0 object-cover h-full m-auto -translate-x-1/2 left-1/2 ${
+          isMobile() ? "w-full" : ""
+        }`}
       />
       {isMobile() ? (
         <img
           src="https://24108406.fs1.hubspotusercontent-na1.net/hubfs/24108406/%5Bi-SmokeStack%5D/Website/Files%20for%20Developer/Contact%20us%20Page/Mobile/table%20%20by%20%5Bi-smokestack%5D.png"
           alt="table"
-          className="fixed bottom-0 z-0 object-cover h-48 m-auto -translate-x-1/2 left-1/2"
+          className={`fixed bottom-0 z-0 object-cover h-48 m-auto -translate-x-1/2 left-1/2 ${
+            isMobile() ? "w-full" : ""
+          }`}
         />
       ) : null}
       {showHint ? (
@@ -51,7 +55,9 @@ function Telephone() {
               : "https://24108406.fs1.hubspotusercontent-na1.net/hubfs/24108406/%5Bi-SmokeStack%5D/Website/Files%20for%20Developer/Contact%20us%20Page/Web/Elements/Spotlight%20by%20%5Bi-smokestack%5D.png"
           }
           alt="hint"
-          className="fixed z-10 object-cover h-full m-auto -translate-x-1/2 left-1/2"
+          className={`fixed z-10 object-cover h-full m-auto -translate-x-1/2 left-1/2 ${
+            isMobile() ? "w-full" : ""
+          }`}
         />
       ) : null}
       <img
@@ -60,6 +66,7 @@ function Telephone() {
         className={`absolute z-20 -translate-x-1/2 bottom-12 left-1/2 ${
           isMobile() ? "w-40" : "w-72"
         }`}
+        onClick={() => setIsCalling(true)}
       />
       <img
         src="https://24108406.fs1.hubspotusercontent-na1.net/hubfs/24108406/Files%20for%20Developer/Contact%20us%20Page/Web/Ringing%20Slide/2.%20Reciever%20by%20%5Bi-smokestack%5D.png"
@@ -81,7 +88,7 @@ function Telephone() {
       <div
         className={`absolute z-0 text-center -translate-x-1/2 left-1/2 font-yfs  ${
           isMobile() ? "bottom-80 flex flex-col gap-3" : "bottom-106"
-        }`}
+        } ${isMobile() && showHint ? "hidden" : ""}`}
       >
         <p
           className={`pl-10 rotate-6 ${isCalling ? "xl_text" : "hidden"} ${
